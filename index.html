@@ -18,63 +18,115 @@
 <body>
 
 
-    <main class="mx-36 my-10">
-        <nav class="flex justify-between align-baseline">
-            <!-- Division to fix image and logo -->
-            <div class="flex space-x-2">
-                <div>
-                    <img src="assets/logo.png" alt="">
-                </div>
-                <div>
-                    <h3 class="font-light text-[35px]">Dev<span class="font-bold text-[35px]">Board</span></h3>
-                </div>
+    <!-- Navbar starts here -->
+    <nav class="flex justify-between align-baseline mx-14 my-10">
+        <!-- Division to fix image and logo -->
+        <div class="flex space-x-2">
+            <div>
+                <img src="assets/logo.png" alt="">
             </div>
+            <div>
+                <h3 class="font-light text-[35px]">Dev<span class="font-bold text-[35px]">Board</span></h3>
+            </div>
+        </div>
 
-            <!--Division to handle right portion of navbar  -->
-            <div class="flex space-x-3 ">
-                <div class="flex space-x-3 align-baseline rounded-[32px] mr-10">
-                    <i class="fa-solid fa-square-check text-4xl text-[#3752FD]"></i>
-                    <h1 class="font-bold text-3xl">23</h1>
-
-                </div>
-                <div>
-                    <button><img src="assets/theme-btn.png" alt=""></button>
-                </div>
-
+        <!--Division to handle right portion of navbar  -->
+        <div class="flex space-x-3 ">
+            <div class="flex space-x-3 align-baseline rounded-[32px] mr-10">
+                <i class="fa-solid fa-square-check text-4xl text-[#3752FD]"></i>
+                <h1 class="font-bold text-3xl">23</h1>
 
             </div>
+            <div>
+                <button><img src="assets/theme-btn.png" alt=""></button>
+            </div>
 
-        </nav>
 
-        <section class="flex mt-16">
+        </div>
+
+    </nav>
+
+    <main class="mx-14 my-10">
+        
+
+        <section class="flex mt-16 space-x-6">
 
             <!-- first div for the section portion -->
-            <div class="rounded-xl mx-6 ">
+            <div class="rounded-xl w-3/4">
 
 
-                <div class="">
+                <div class="grid grid-cols-4 gap-6  mb-10">
+
+                    <!-- First card -->
+                    <div class="flex space-x-3 bg-[#F4F7FF] rounded-xl py-3 justify-center">
+
+                        <i class="fa-solid fa-square-check text-2xl text-[#3752FD]  mt-4"></i>
+                        <div class="">
+                            <p class="font-medium text-xl">Task Assigned</p>
+                            <h1 class="font-bold text-2xl">05</h1>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- second card -->
+                    <div
+                        class="flex col-span-2 bg-[linear-gradient(45deg,#3752FD,#6C7FFA,#9BA8F8)]  rounded-xl py-4 space-x-5">
+
+
+                        <div class="ml-5">
+                            <img src="assets/board.png" alt="">
+                        </div>
+                        <h1 class="font-bold text-white my-5">
+                            Discover Something <br>
+                            New Today!
+                        </h1>
+
+                    </div>
+
+
+                    <!-- Third card -->
+                    <div class="bg-[#F4F7FF] rounded-xl flex p-4 space-x-3">
+
+                        <div>
+                            <img class="w-8 mt-3 " src="assets/calender.png" alt="">
+                        </div>
+
+                        <div>
+                            <h1 class="font-medium text-xl"> Wed ,<br>
+                                <span class="font-bold text-xl">July 28</span>
+                            </h1>
+                        </div>
+
+
+                    </div>
 
                 </div>
 
 
                 <!-- grid control divs starting here -->
-                <div class="grid grid-cols-2 gap-3 ">
+                <div class="grid grid-cols-3 gap-3 ">
 
 
                     <!-- First card -->
-                    <div class="bg-[#F4F7FF] w-[342px] h-[312px] p-4">
-                        <p>ShopEase</p>
-                        <h1 class="font-bold text-2xl">Fix Mobile Button Issue </h1>
-                        <p class="line-clamp-2">Debug using Chrome DevTools,<br>
+                    <div class="bg-[#F4F7FF]  p-4 rounded-lg ">
+
+                        <p class="bg-white w-[100px] px-2 text-xl font-normal rounded-md">ShopEase</p>
+
+                        <h1 class="font-bold text-2xl py-4">Fix Mobile Button </h1>
+
+                        <p class="line-clamp-2  bg-white rounded-lg">Debug using Chrome DevTools,<br>
                             check for overlapping elements, <br>
                             and ensure onClick works properly <br>
                             and ensure onClick works properly
                         </p>
 
-                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <!-- First card button portion -->
-                        <div class="flex space-x-10">
+                        <div class="flex justify-between">
                             <div>
                                 <p> Deadline</p>
                                 <h1>21 March 2025</h1>
@@ -92,15 +144,17 @@
 
 
                     <!-- second card -->
-                    <div class="bg-[#F4F7FF]  w-[342px] h-[312px] p-4 ">
-                        <p>CloudSync</p>
-                        <h1 class="font-bold text-2xl">Add Dark Mode</h1>
-                        <p class="line-clamp-2">
+                    <div class="bg-[#F4F7FF]  p-4 rounded-lg">
+                        <p class="bg-white w-[100px] px-2 text-xl font-normal rounded-md">CloudSync</p>
+
+                        <h1 class="font-bold text-2xl py-4">Add Dark Mode</h1>
+
+                        <p class="line-clamp-2 bg-white rounded-lg">
                             Store the user's preference in localStorage, <br>
                             update CSS variables dynamically,<br>
                             and apply a smooth transition effect.</p>
 
-                            <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <div class="flex justify-between">
                             <div>
@@ -119,20 +173,20 @@
 
 
                     <!-- Third card -->
-                    <div class="bg-[#F4F7FF]  w-[342px] h-[312px] p-4">
+                    <div class="bg-[#F4F7FF]   p-4 rounded-lg">
 
-                        <p class="bg-white rounded-lg">SwiftPay</p>
+                        <p class="bg-white w-[100px] px-2 text-xl font-normal rounded-md">SwiftPay</p>
 
-                        <h1 class="font-bold text-2xl">Optimize Home page</h1>
+                        <h1 class="font-bold text-2xl py-4">Optimize Home page</h1>
 
-                        <p class="line-clamp-2">
+                        <p class="line-clamp-2  bg-white rounded-lg">
                             Debug using Chrome DevTools,<br>
                             check for overlapping elements, <br>
                             and ensure onClick works properly <br>
                             and ensure onClick works properly
                         </p>
 
-                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <div class="flex justify-between">
 
@@ -154,17 +208,20 @@
 
 
                     <!-- Fourth card -->
-                    <div class="bg-[#F4F7FF]  w-[342px] h-[312px] p-4">
-                        <p>Meta</p>
-                        <h1 class="font-bold text-2xl">Add new emoji 🤲</h1>
-                        <p class="line-clamp-2">
+                    <div class="bg-[#F4F7FF]  p-4 rounded-lg">
+
+                        <p class="bg-white w-[100px] px-2 text-xl font-normal rounded-md">Meta</p>
+
+                        <h1 class="font-bold text-2xl py-4">Add new emoji 🤲</h1>
+
+                        <p class="line-clamp-2 bg-white rounded-lg">
                             Debug using Chrome DevTools,<br>
                             check for overlapping elements, <br>
                             and ensure onClick works properly <br>
                             and ensure onClick works properly
                         </p>
 
-                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <div class="flex justify-between">
                             <div>
@@ -182,17 +239,20 @@
 
 
                     <!-- Fifth card -->
-                    <div class="bg-[#F4F7FF]  w-[342px] h-[312px] p-4">
-                        <p>Google LLC</p>
+                    <div class="bg-[#F4F7FF]   p-4 rounded-lg">
+
+                        <p class="bg-white w-[120px] px-2 text-xl font-normal rounded-md">Google LLC</p>
+
                         <h1 class="font-bold text-2xl py-4">Integrate OpenAI API </h1>
-                        <p class="line-clamp-2">
+
+                        <p class="line-clamp-2 bg-white rounded-lg">
                             Debug using Chrome DevTools,<br>
                             check for overlapping elements, <br>
                             and ensure onClick works properly <br>
                             and ensure onClick works properly
                         </p>
 
-                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <div class="flex justify-between">
                             <div>
@@ -210,28 +270,37 @@
 
 
                     <!-- sixth card -->
-                    <div class="bg-[#F4F7FF]  w-[342px] h-[312px] p-4">
-                        <p>Google LLC</p>
-                        <h1 class="font-bold text-2xl py-4">Integrate OpenAI API </h1>
-                        <p class="line-clamp-2">
+                    <div class="bg-[#F4F7FF]  p-4 rounded-lg">
+
+                        <p class="bg-white w-[100px] px-2 text-xl font-normal rounded-md">Glassdoar</p>
+
+                        <h1 class="font-bold text-2xl py-4">Improve Job Searching </h1>
+
+                        <p class="line-clamp-2 bg-white rounded-lg">
                             Debug using Chrome DevTools,<br>
                             check for overlapping elements, <br>
                             and ensure onClick works properly <br>
                             and ensure onClick works properly
                         </p>
 
-                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6">
+                        <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
 
                         <div class="flex justify-between">
+
                             <div>
+
                                 <p> Deadline</p>
                                 <h1>21 March 2025</h1>
+
                             </div>
+
                             <div>
-                                <a href=""><button
-                                        class="bg-[#3752FD] px-3 py-2 rounded-lg text-white">Completed</button></a>
+                                <a href="">
+                                    <button class="bg-[#3752FD] px-3 py-2 rounded-lg text-white">Completed</button></a>
                             </div>
+
                         </div>
+
                     </div>
 
                 </div>
@@ -240,28 +309,37 @@
 
 
             <!-- second div for the section portion -->
-            <div class="text-center rounded-2xl w-[366px] h-[968px] ml-6 p-4">
-                    
-                     <div class="flex space-x-4 justify-center ">
-                        
-                            <i class="fa-solid fa-rotate-right fa-flip-horizontal"></i>
-                            <h1 class="font-medium">Activity History</h1>
-                        
-                     </div>
+            <div class=" rounded-2xl  bg-white w-1/4">
 
-                     <button>Clear History</button>
-                     <br>
-                     <hr>
-                     <br>
-                     <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                     <br>
-                     <br>
-                     <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                <div class="flex space-x-4 justify-center mt-4 ">
+
+                    <i class="fa-solid fa-rotate-right fa-flip-horizontal mt-1"></i>
+                    <h1 class="font-medium text-sm ">Activity History</h1>
+
+                </div>
+
+                <div class="text-center my-4">
+                    <a href=""><button class="bg-[#3752FD] px-3 py-2 rounded-lg text-white ">Clear History</button></a>
+                </div>
+
+
+                <hr class="border-t-2 border-dashed border-[#3752FD] mx-2 my-6 opacity-20">
+
+                <div class="space-y-4 ml-6">
+
+                    <p>You have Complete The Task <br>
+                        Add Dark Mode at 12:48:15 PM</p>
+
+                    <p>You have Complete The Task <br>
+                        Add Dark Mode at 12:48:15 PM</p>
+
+                </div>
+
 
 
             </div>
 
-            
+
 
         </section>
     </main>
