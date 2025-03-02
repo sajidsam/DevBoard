@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }, 500);
                 }
 
-                // Increment the value in the addTask element by 1
+                
                 let currentTaskCount = parseInt(addTaskCount.textContent);
                 if (!isNaN(currentTaskCount)) {
                     addTaskCount.textContent = currentTaskCount + 1;
