@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
+
+<body class="bg-[#F4F7FF]">
+
+    <nav class="flex justify-between align-baseline mx-14 py-6 bg-white px-6 rounded-lg relative top-4">
+        <!-- Division to fix image and logo -->
+        <div class="flex space-x-2">
+            <div>
+                <img src="assets/logo.png" alt="">
+            </div>
+            <div>
+                <h3 class="font-light text-[35px]">Dev<span class="font-bold text-[35px]">Board</span></h3>
+            </div>
+        </div>
+
+        <!--Division to handle right portion of navbar  -->
+
+
+        <button class="bg-[#3752FD] px-3 py-2 rounded-lg text-white" id="backtodesk">Back to Desk</button>
+
+
+    </nav>
+
+    <main>
+        <section>
+
+            <h1 class="text-center my-6 font-bold text-2xl ">BLOGS</h1>
+
+            <div class="flex flex-col justify-center mx-20 gap-4 w-3/4 pb-5">
+
+                <div class="bg-white rounded-lg p-6">
+
+                    <h1 class="font-bold text-xl">
+                        
+                        Question-1: What are the different ways to select an element in the
+                        DOM?
+
+
+                    </h1>
+
+                    <p class="line-clamp-2 my-4">
+                        There are five ways <br>
+                        1. getElementById(): Selects an element by its ID. <br>
+                        2. getElementsByClassName(): Selects elements by class name.
+                        3. getElementsByTagName(): Selects elements by tag name.
+                        4. querySelector():
+                        5. querySelectorAll():
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+
+                    <h1 class="font-bold text-xl">Question-2: What is the difference between innerHTML, innerText, and
+                        textContent ?
+                    </h1>
+
+                    <p class="line-clamp-2 my-4">
+                        innerHTML:  Represents the HTML content inside an element, including any HTML tags.
+                        <br>
+                        innerText:  Represents the visible text content inside an element
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+
+                    <h1 class="font-bold text-xl">Question-3: What is event delegation in the DOM?</h1>
+
+                    <p class="line-clamp-2 my-4">Event delegation in the DOM is a technique where a single event listener is attached to a parent element</p>
+
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+
+                    <h1 class="font-bold text-xl">Question-4: What is event bubbling in the DOM?</h1>
+
+                    <p class="line-clamp-2 my-4">
+                        Event bubbling in the DOM refers to the process <br>
+                        by which an event triggered on an element propagates
+                    </p>
+
+                </div>
+
+                <div class="bg-white rounded-lg p-6">
+
+                    <h1 class="font-bold text-xl">
+                        Question-5: How do you create, add, and remove elements using
+                        JavaScript?
+                    </h1>
+
+                    <p class="line-clamp-2 my-4">
+                        To create a new element in the DOM: document.createElement() method <br>
+                        To remove an element from the DOM: removeChild() method on the parent element
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            
+        </section>
+    </main>
+
+
+    <script src="script/scripts.js"></script>
 </body>
+
 </html>
