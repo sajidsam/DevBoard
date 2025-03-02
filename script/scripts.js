@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Function to display the current date
     function getCurrentDate() {
         const options = { weekday: 'short', month: 'long', day: 'numeric' };
         return new Date().toLocaleDateString('en-US', options);
     }
 
-    // Set the date inside the <h1> element with ID "current-date"
     const dateElement = document.getElementById("current-date");
     if (dateElement) {
         dateElement.textContent = getCurrentDate();
     }
 
-    // Task count functionality
     const buttons = document.querySelectorAll(".completed");
-    const task = document.getElementById("cntTask"); // Ensure cntTask exists in HTML
+    const task = document.getElementById("cntTask");
+    const taskMessages = document.querySelector(".space-y-4");
+    const addTaskCount = document.getElementById("addTask");
 
     if (task) {
         for (let i = 0; i < buttons.length; i++) {
@@ -25,11 +24,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!isNaN(currentCount) && currentCount > 0) {
                     task.textContent = currentCount - 1;
                 }
+
+                const taskName = buttons[i].closest('.task').querySelector('.task-title').textContent;
+                const currentTime = new Date().toLocaleTimeString();
+                const message = `You have completed the task: ${taskName} at ${currentTime}`;
+                const messageElement = document.createElement("p");
+                messageElement.textContent = message;
+                taskMessages.appendChild(messageElement);
+
+                alert("Board updated successfully!");
+
+                const remainingTasks = document.querySelectorAll(".completed:not(:disabled)").length;
+                if (remainingTasks === 0) {
+                    setTimeout(() => {
+                        alert("Congratulations! You have completed all the current tasks");
+                    }, 500);
+                }
+
+                // Increment the value in the addTask element by 1
+                let currentTaskCount = parseInt(addTaskCount.textContent);
+                if (!isNaN(currentTaskCount)) {
+                    addTaskCount.textContent = currentTaskCount + 1;
+                }
             });
         }
     }
 
-    // Change background color on button click
     function getRandomColor() {
         return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     }
@@ -38,12 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.background = getRandomColor();
     });
 
-    // Div leads to another page
+    const clearHistoryButton = document.getElementById("clearHistoryBtn");
+    if (clearHistoryButton) {
+        clearHistoryButton.addEventListener("click", function () {
+            taskMessages.innerHTML = '';
+        });
+    }
+
     document.getElementById("discover")?.addEventListener("click", function () {
         window.location.href = "idex.html";
     });
 
-    // Back to desk button
     document.getElementById("backtodesk")?.addEventListener("click", function () {
         window.location.href = "index.html";
     });
